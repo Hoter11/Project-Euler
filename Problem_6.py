@@ -11,3 +11,18 @@
 #Hence the difference between the sum of the squares of the first ten natural #numbers and the square of the sum is 3025 − 385 = 2640.
 
 #Find the difference between the sum of the squares of the first one hundred #natural numbers and the square of the sum.
+
+def func(num):
+    suma = 0
+    resta = 0
+    for i in range(1,num+1):
+        suma += i**2
+        resta += i
+
+    return (resta**2 - suma)
+
+import time
+t1 = time.clock()
+print func(1000000000)
+t2 = time.clock()
+print "Time: ", t2-t1
